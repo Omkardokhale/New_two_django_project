@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+  <head>
+   
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <style>
+		.myTable { 
+  		width: 40%;
+  		text-align: left;
+  		background-color: lemonchiffon;
+  		border-collapse: collapse; 
+  		}
+		.myTable th { 
+  		background-color: lightblue;
+  		color: red; 
+  		}
+		.myTable td, 
+		.myTable th { 
+  		padding: 10px;
+  		border: 2px solid goldenrod; 
+  		}
+
+  		.myTable1 { 
+  		width: 40%;
+  		text-align: left;
+  		background-color: lightblue;
+  		border-collapse: collapse; 
+  		}
+		.myTable1 th { 
+  		background-color: goldenrod;
+  		color: white; 
+  		}
+		.myTable1 td, 
+		.myTable1 th { 
+  		padding: 10px;
+  		border: 2px solid goldenrod; 
+  		}
+
+  		hr{
+  		color: #f00;
+		background-color: #f00;
+		height: 5px;
+		}
+		
+		</style>
+    
+  </head>
+  <body>
+
+    <h2> <center>WELCOME TO </h2></center>
+    	  <h3><center><font color="red">Student Info </font> </h3></center>
+    	  <hr color="green">
+    	  <h4> <center> <b><i>SUMMARY EACH USER </i></b></center> </h4>
+    
+
+
+
+
+<hr>
+
+				<table border=1  color="red" align="center" class="myTable1">
+				<tr>
+  				<th>City Name</th>
+  				<th>Country</th>
+                  <th>Population</th>
+ 				</tr>
+  
+
+                 {% for entry in city12 %}
+				<tr>
+			
+  				<td align="center"> {{entry.city_name}}</td>
+                <td align="center"> {{entry.country}}</td>
+                <td align="center"> {{entry.population}}</td>
+ 				</tr>
+
+
+                 {% endfor %}
+				</table>
+                 
+  </body>
+</html>
